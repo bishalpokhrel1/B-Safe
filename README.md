@@ -153,14 +153,22 @@ This allows authorities to take preventive action before an incident occurs.
 
 ## 🛠️ Technology Stack
 
-- **Frontend:** React, Vite
-- **Backend:** Firebase, Node.js
-- **Blockchain:** Smart contracts for digital ID verification and audit logging
-- **AI/ML:** Natural language processing for chatbot, predictive analytics for risk detection
-- **Maps & Location:** Google Maps API, Geofencing
-- **Real-time Communication:** WebSockets for live updates
+| Layer | Technology / Tools | Purpose / What It Does |
+|-------|-------------------|------------------------|
+| **Frontend (Web/App UI)** | React.js / Next.js<br>React Native / Flutter<br>Mapbox / Leaflet | Builds user interface for tourists & admins, handles maps, dashboards, chat, notifications, trip planner |
+| **Backend / API Layer** | Python (FastAPI / Flask)<br>Node.js (optional) | Core logic, authentication, geofencing, SOS handling, AI assistant API, trip planning algorithms |
+| **Database** | Firebase Firestore<br>PostgreSQL<br>MongoDB | Stores user accounts, trip logs, safety alerts, analytics, incident reports, chatbot history |
+| **Blockchain Layer** | Hyperledger Fabric<br>Polygon / Ethereum Testnet | Stores tourist digital IDs, incident logs, audit trails; ensures tamper-proof transparency |
+| **AI & ML Services** | TensorFlow / PyTorch<br>OpenAI APIs<br>Custom ML models | Powers safety assistant chatbot, predictive alerts, crowd density detection, trip planner intelligence |
+| **Maps & Geo Services** | Google Maps API<br>Mapbox<br>OpenStreetMap | Real-time maps, location tracking, routing, geofencing, safety zone visualization |
+| **Real-Time Communication** | Firebase Realtime DB<br>WebSockets<br>MQTT | Live updates for SOS alerts, tourist locations, admin notifications, IoT wearable data |
+| **Cloud Hosting / DevOps** | AWS / Google Cloud<br>Firebase Hosting | Hosts backend, dashboard, serverless functions, scaling, monitoring, deployment automation |
+| **Authentication & Security** | Firebase Auth<br>OAuth 2.0<br>JWT<br>Blockchain Keys | Secures login, digital ID verification, access control, encrypted communication |
+| **IoT & Wearable Integration** | MQTT<br>ESP32<br>BLE<br>Sensor APIs | Live health monitoring, auto SOS triggers, location sync with wearables |
+| **Admin Dashboard Framework** | React.js + Tailwind<br>Next.js Admin Template | Professional dashboard for controllers with real-time monitoring & incident management |
 
 ---
+
 
 ## 🚀 Getting Started
 
