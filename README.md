@@ -512,26 +512,23 @@ B-Safe consists of **4 major interconnected layers**:
 
 ---
 
-### 🎯 Integration Summary
-
-| Component | Communicates With | Purpose |
-|-----------|-------------------|----------|
-| **Frontend** | Backend API, Firebase Auth | Displays UI, handles user input |
-| **Backend** | Frontend, Database, Blockchain, AI | Core logic, security, routing |
-| **Database** | Backend, Frontend (listeners) | Stores all application data |
-| **Blockchain** | Backend | Tamper-proof logging |
-| **AI Services** | Backend | Intelligence (chat, planning, predictions) |
-| **Maps API** | Frontend, Backend | Location services, routing |
-
-**Key Integration Points:**
-- **API calls** connect frontend ↔ backend
-- **Firebase listeners** enable real-time updates
-- **Blockchain** ensures data integrity
-- **AI services** provide intelligent features
-- **Geofencing** triggers automatic alerts
-- **Admin dashboard** monitors everything live
 
 
+
+
+
+### 🔗 Detailed Component Integration Table
+
+| Component | What It Does | How It Connects to Others |
+|-----------|--------------|---------------------------|
+| **Frontend (Tourist App & Admin Dashboard)** | Shows UI, maps, SOS button, dashboards, chat, trip planner | Sends requests to Backend API; gets data (alerts, itineraries, incident status) from Backend |
+| **Backend API (FastAPI/Flask)** | Central logic engine: geofencing, SOS handling, trip planning, authentication | Receives data from Frontend; fetches/stores data in Database; calls AI services; writes logs to Blockchain |
+| **Database (Firebase / PostgreSQL / MongoDB)** | Stores user profiles, locations, incidents, chat history, alerts | Backend reads/writes data; Frontend listens for real-time updates; Admin dashboard fetches analytics |
+| **Blockchain Layer (Digital ID & Logs)** | Stores digital IDs and permanent audit logs of SOS and incidents | Backend communicates with blockchain to record events; Admin reads logs for transparency |
+| **AI Services (Chatbot, Trip Planner, Risk Models)** | Generates trip plans, answers queries, predicts risk, analyzes crowds | Backend sends inputs (location, destination, question); AI returns smart results to Frontend and Admin |
+| **Maps & Geolocation Services (Google Maps/Mapbox)** | Provides live map, directions, safe-zone visualization | Frontend displays maps; Backend uses APIs for routing, geofencing, and trip planning |
+| **Real-Time Communication Layer (Firebase Realtime DB / WebSockets)** | Delivers instant SOS alerts, location updates, admin notifications | Backend pushes updates; Frontend/Admin receive them instantly |
+| **Wearables/IoT (Optional)** | Sends health data or fall detection | IoT → Backend via MQTT; Backend triggers alerts & logs to database/blockchain |
 
 ## 🚀 Getting Started
 
